@@ -13,10 +13,12 @@ struct ContentView: View {
         
             LinearGradient(gradient: Gradient(colors: [Color.init(0x141414), Color.init(0x1C1C1C)]), startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
+            
             VStack{
                 Text("QuantoPay")
                     .foregroundColor(.white)
                     .font(.system(size: 25))
+                    .padding(.top, 20)
                 Spacer()
                 
                 EmailConfirmView()
@@ -44,8 +46,8 @@ struct EmailConfirmView: View {
                 Spacer()
                 
                 Text("We've sent a confirmation link to belatrix_lestrange@hotmail.com")
-                    .foregroundColor(.white)
-                Spacer()
+                    .foregroundColor(Color.init(0xEEEEEE))
+                    .padding(.bottom, 20)
                 
                 Text("Wrong email?")
                     .foregroundColor(.white)
@@ -70,10 +72,11 @@ struct EmailConfirmView: View {
                 Text("Resend email")
                     .foregroundColor(.white)
                     .underline()
+                    .padding(.bottom, 10)
                 Spacer()
                 
             }
-            .frame(width: 318, height: 100, alignment: .center)
+            .frame(width: 318, height: 120, alignment: .center)
             
         }
         .frame(width: 318, height: 375, alignment: .center)
